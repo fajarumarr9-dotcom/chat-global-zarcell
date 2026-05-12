@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #d2dbdc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gaya Layar Akun */
+.layar-akun {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.kotak-akun {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.kotak-akun h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #111b21;
+}
+
+.kotak-akun input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.kotak-akun button {
+    width: 100%;
+    padding: 12px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.2s;
+}
+
+.kotak-akun button:hover {
+    background-color: #20b858;
+}
+
+.teks-bawah {
+    text-align: center;
+    font-size: 14px;
+    color: #667781;
+}
+
+.teks-bawah span {
+    color: #128c7e;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Gaya Aplikasi Utama */
+.aplikasi {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-width: 1600px;
+    max-height: 900px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px 0 rgba(0,0,0,0.2);
+}
+
+.daftar-percakapan {
+    width: 35%;
+    border-right: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.kepala-aplikasi {
+    height: 60px;
+    background-color: #f0f2f5;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foto-profil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.foto-profil i {
+    font-size: 28px;
+    color: #54656f;
+}
+
+#info-pengguna {
+    font-size: 12px;
+    color: #111b21;
+    font-weight: 500;
+}
+
+.status-indikator {
+    font-size: 11px;
+}
+
+.status-indikator.daring {
+    color: #25d366;
+}
+
+.status-indikator.ofline {
+    color: #f5a623;
+}
+
+.tombol-atas button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #54656f;
+    margin-left: 15px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.tombol-atas button:hover {
+    background-color: #e9edef;
+}
+
+.kolom-cari {
+    height: 50px;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.kolom-cari i {
+    color: #54656f;
+    margin: 0 12px;
+}
+
+.kolom-cari input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #111b21;
+}
+
+.daftar-teman {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.kartu-teman {
+    display: flex;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.kartu-teman:hover, .kartu-teman.aktif {
+    background-color: #f0f2f5;
+}
+
+.foto-teman {
+    margin-right: 15px;
+}
+
+.foto-teman i {
+    font-size: 48px;
+    color: #54656f;
+}
+
+.info-teman {
+    flex: 1;
+}
+
+.nama-dan-waktu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.nama-dan-waktu h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111b21;
+}
+
+.waktu-terakhir {
+    font-size: 12px;
+    color: #667781;
+}
+
+.pesan-terakhir {
+    font-size: 14px;
+    color: #667781;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Ruang Obrolan */
+.ruang-obrolan {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #efeae2;
+    background-image: url('data:image/svg+xml,%3Csvg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm32 32c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM8 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm32-32c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6z" fill="%23d0d9de" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E');
+}
+
+.kepala-obrolan {
+    height: 60px;
+    background-color: #f0f2f5;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #e6e6e6;
+}
+
+.tombol-kembali {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #54656f;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.info-pengirim {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.foto-pengirim {
+    margin-right: 12px;
+}
+
+.foto-pengirim i {
+    font-size: 38px;
+    color: #54656f;
+}
+
+.nama-dan-status h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111b21;
+}
+
+.status {
+    font-size: 12px;
+    color: #667781;
+}
+
+.tombol-obrolan button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #54656f;
+    margin-left: 15px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.tombol-obrolan button:hover {
+   
