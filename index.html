@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Tiruan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Halaman Daftar & Masuk -->
+    <div class="layar-akun" id="layar-akun">
+        <div class="kotak-akun">
+            <h2 id="judul-bentuk">Daftar Akun Baru</h2>
+
+            <div id="bentuk-daftar">
+                <input type="text" id="nama-lengkap" placeholder="Nama Lengkap" required>
+                <input type="date" id="tanggal-lahir" required>
+                <button id="tombol-daftar">Daftar & Buat ID</button>
+                <p class="teks-bawah">Sudah punya akun? <span id="tautan-masuk">Masuk di sini</span></p>
+            </div>
+
+            <div id="bentuk-masuk" style="display: none;">
+                <input type="text" id="id-masuk" placeholder="ID Pengguna (5 Angka)" maxlength="5" required>
+                <button id="tombol-masuk">Masuk</button>
+                <p class="teks-bawah">Belum punya akun? <span id="tautan-daftar">Daftar di sini</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Halaman Utama Aplikasi -->
+    <div class="aplikasi" id="aplikasi" style="display: none;">
+        <!-- Bagian Daftar Percakapan -->
+        <div class="daftar-percakapan">
+            <div class="kepala-aplikasi">
+                <div class="foto-profil">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="info-pengguna">ID: ----- | Nama: ----</span>
+                    <span id="status-sambungan" class="status-indikator ofline">🟠 Menyambung...</span>
+                </div>
+                <div class="tombol-atas">
+                    <button><i class="fas fa-comment-alt"></i></button>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+            <div class="kolom-cari">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cari atau mulai obrolan baru">
+            </div>
+            <div class="daftar-teman" id="daftar-teman">
+                <div class="kartu-teman aktif" data-id="umum">
+                    <div class="foto-teman"><i class="fas fa-users"></i></div>
+                    <div class="info-teman">
+                        <div class="nama-dan-waktu">
+                            <h3>Ruang Umum</h3>
+                            <span class="waktu-terakhir">-</span>
+                        </div>
+                        <p class="pesan-terakhir">Obrolan bersama semua pengguna terhubung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Ruang Obrolan -->
+        <div class="ruang-obrolan">
+            <div class="kepala-obrolan">
+                <button class="tombol-kembali"><i class="fas fa-arrow-left"></i></button>
+                <div class="info-pengirim">
+                    <div class="foto-pengirim"><i class="fas fa-users"></i></div>
+                    <div class="nama-dan-status">
+                        <h3 id="nama-sasaran">Ruang Umum</h3>
+                        <p class="status" id="status-obrolan">Siap mengobrol</p>
+                    </div>
+                </div>
+                <div class="tombol-obrolan">
+                    <button><i class="fas fa-video"></i></button>
+                    <button><i class="fas fa-phone"></i></button>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="isi-obrolan" id="isi-obrolan"></div>
+
+            <form class="form-kirim" id="form-kirim">
+                <button class="tombol-tambahan"><i class="fas fa-plus"></i></button>
+                <button class="tombol-emoji"><i class="fas fa-smile"></i></button>
+                <input type="text" id="input-pesan" placeholder="Ketik pesan..." required>
+                <button type="submit" class="tombol-kirim"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="skrip.js"></script>
+</body>
+</html>
